@@ -1,0 +1,50 @@
+body, html {
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+
+.full-height {
+    height: 100vh;
+}
+
+.form-section {
+    background-color: white;
+}
+
+.illustration-section {
+    background-color: #e6e0ff;
+}
+
+.btn-primary {
+    background-color: #6f42c1;
+    border-color: #6f42c1;
+}
+
+.btn-primary:hover {
+    background-color: #5a32a3;
+    border-color: #5a32a3;
+}
+
+.form-control:focus {
+    border-color: #6f42c1;
+    box-shadow: 0 0 0 0.2rem rgba(111, 66, 193, 0.25);
+}
+
+.btn-google {
+    background-color: #fff;
+    color: #757575;
+    border: 1px solid #ddd;
+}
+
+.btn-google:hover {
+    background-color: #f1f3f4;
+}
+
+.login-link {
+    color: #6f42c1;
+    text-decoration: none;
+}
+
+.login-link:hover {
+    text-decoration: underline;
+}
