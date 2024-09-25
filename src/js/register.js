@@ -1,4 +1,7 @@
-window.addEventListener('load', function () {
-    document.querySelector('.form-section').classList.add('visible');
-    document.querySelector('.illustration-section').classList.add('visible');
+document.addEventListener("DOMContentLoaded", function() {
+    var formSection = document.querySelector('.form-section');
+    var illustrationSection = document.querySelector('.illustration-section');
+
+    formSection.classList.add('visible');
+    illustrationSection.classList.add('visible');
 });

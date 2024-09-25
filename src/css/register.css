@@ -9,42 +9,55 @@ body, html {
 
 .form-section {
     background-color: white;
+    padding: 2rem;
 }
 
 .illustration-section {
-    background-color: #e6e0ff;
+    background-color: #f3e8ff;
 }
 
 .btn-primary {
-    background-color: #6f42c1;
-    border-color: #6f42c1;
+    background-color: #7e22ce;
+    border-color: #7e22ce;
 }
 
 .btn-primary:hover {
-    background-color: #5a32a3;
-    border-color: #5a32a3;
+    background-color: #6b21a8;
+    border-color: #6b21a8;
+}
+
+.form-control {
+    border: 1px solid #e5e7eb;
+    padding: 0.75rem 1rem;
 }
 
 .form-control:focus {
-    border-color: #6f42c1;
-    box-shadow: 0 0 0 0.2rem rgba(111, 66, 193, 0.25);
+    border-color: #7e22ce;
+    box-shadow: 0 0 0 0.2rem rgba(126, 34, 206, 0.25);
 }
 
 .btn-google {
     background-color: #fff;
-    color: #757575;
-    border: 1px solid #ddd;
+    color: #374151;
+    border: 1px solid #e5e7eb;
+    padding: 0.75rem 1rem;
 }
 
 .btn-google:hover {
-    background-color: #f1f3f4;
+    background-color: #f9fafb;
 }
 
 .login-link {
-    color: #6f42c1;
+    color: #7e22ce;
     text-decoration: none;
 }
 
 .login-link:hover {
     text-decoration: underline;
+}
+
+.form-label {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #374151;
 }
