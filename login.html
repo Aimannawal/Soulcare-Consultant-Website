@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create Account</title>
+    <title>Alomani Login</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
@@ -12,90 +11,77 @@
             height: 100%;
             font-family: 'Poppins', sans-serif;
         }
-
         .full-height {
             height: 100vh;
         }
-
         .form-section {
             background-color: white;
             padding: 2rem;
-            opacity: 0; 
-            transform: translateY(20px); 
-            transition: opacity 1s ease-out, transform 1s ease-out; 
         }
-
         .illustration-section {
             background-color: #f3e8ff;
-            opacity: 0; 
-            transform: translateY(20px); 
-            transition: opacity 1s ease-out, transform 1s ease-out; 
         }
-
-        .form-section.visible, .illustration-section.visible {
-            opacity: 1; 
-            transform: translateY(0); 
-        }
-
         .btn-primary {
             background-color: #7e22ce;
             border-color: #7e22ce;
         }
-
         .btn-primary:hover {
             background-color: #6b21a8;
             border-color: #6b21a8;
         }
-
         .form-control {
             border: 1px solid #e5e7eb;
             padding: 0.75rem 1rem;
         }
-
         .form-control:focus {
             border-color: #7e22ce;
             box-shadow: 0 0 0 0.2rem rgba(126, 34, 206, 0.25);
         }
-
         .btn-google {
             background-color: #fff;
             color: #374151;
             border: 1px solid #e5e7eb;
             padding: 0.75rem 1rem;
         }
-
         .btn-google:hover {
             background-color: #f9fafb;
         }
-
         .login-link {
             color: #7e22ce;
             text-decoration: none;
         }
-
         .login-link:hover {
             text-decoration: underline;
         }
-
         .form-label {
             font-size: 0.875rem;
             font-weight: 500;
             color: #374151;
         }
+        .modal-content {
+            border-radius: 0.5rem;
+        }
+        .modal-header {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+        .modal-body {
+            padding-top: 0;
+        }
+        .modal-footer {
+            border-top: none;
+            justify-content: flex-end;
+        }
     </style>
 </head>
-
 <body>
     <div class="container-fluid">
         <div class="row full-height">
             <div class="col-md-6 form-section d-flex align-items-center justify-content-center">
                 <div class="w-100" style="max-width: 400px;">
-                    <h1 class="mb-4" style="color: #7e22ce; font-weight: 600;">Create Account</h1>
-                    <form>
-                        <div class="mb-3">
-                            <label for="name" class="form-label">Name</label>
-                            <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
-                        </div>
+                    <h1 class="mb-2" style="color: #7e22ce; font-weight: 600;">Alomani</h1>
+                    <p class="mb-4" style="font-size: 0.875rem; color: #6b7280;">Understand your feeling with AI Assistant</p>
+                    <form id="loginForm">
                         <div class="mb-3">
                             <label for="email" class="form-label">Email</label>
                             <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
@@ -104,21 +90,25 @@
                             <label for="password" class="form-label">Password</label>
                             <input type="password" class="form-control" id="password" placeholder="••••••••" required>
                         </div>
-                        <div class="mb-4">
-                            <label for="confirmPassword" class="form-label">Password Confirmation</label>
-                            <input type="password" class="form-control" id="confirmPassword" placeholder="••••••••" required>
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="remember">
+                                <label class="form-check-label" for="remember" style="font-size: 0.875rem;">Remember Me</label>
+                            </div>
+                            <a href="#" class="login-link" style="font-size: 0.875rem;">Forget My Password</a>
                         </div>
                         <div class="d-grid mb-4">
-                            <button type="submit" class="btn btn-primary py-2">Register</button>
+                            <button type="submit" class="btn btn-primary py-2">Login</button>
                         </div>
                         <div class="d-grid">
                             <button type="button" class="btn btn-google">
                                 <img src="https://img.icons8.com/color/16/000000/google-logo.png" alt="Google logo" class="me-2">
-                                Register with Google
+                                Login with Google
                             </button>
                         </div>
                         <div class="mt-4 text-center">
-                            <a href="#" class="login-link" style="font-size: 0.875rem;">Have an Account? Login Now</a>
+                            <span style="font-size: 0.875rem; color: #6b7280;">Doesn't Have Account? </span>
+                            <a href="#" class="login-link" style="font-size: 0.875rem;">Register Now</a>
                         </div>
                     </form>
                 </div>
@@ -129,8 +119,38 @@
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="src/js/register.js"></script>
-</body>
+    <!-- Modal -->
+    <div class="modal fade" id="problemModal" tabindex="-1" aria-labelledby="problemModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="problemModalLabel">What's your problem?</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <textarea class="form-control" id="problemDescription" rows="5" placeholder="Share your problem here"></textarea>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" onclick="sendProblem()">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            var modal = new bootstrap.Modal(document.getElementById('problemModal'));
+            modal.show();
+        });
+
+        function sendProblem() {
+            var problem = document.getElementById('problemDescription').value;
+            console.log('Problem submitted:', problem);
+            var modal = bootstrap.Modal.getInstance(document.getElementById('problemModal'));
+            modal.hide();
+        }
+    </script>
+</body>
 </html>
