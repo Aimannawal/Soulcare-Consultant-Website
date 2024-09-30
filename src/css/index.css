@@ -129,6 +129,22 @@ nav {
   color: #7e30e1;
 }
 
+.sticky-navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999; /* Supaya navbar selalu di atas elemen lainnya */
+  background: rgba(255, 255, 255, 0.8); /* Sedikit transparan */
+  backdrop-filter: blur(10px); /* Efek blur pada background */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan */
+  transition: background 0.3s ease, backdrop-filter 0.3s ease; /* Transisi halus */
+}
+
+.sticky-navbar.scrolled {
+  background: rgba(255, 255, 255, 0.9); /* Mengubah opacity saat scroll */
+}
+
+
 .review-container {
   background-color: #831eff;
   width: 425px;
