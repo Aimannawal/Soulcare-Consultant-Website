@@ -1,0 +1,88 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #ffffff;
+}
+.sidebar {
+  height: 100vh;
+  background-color: #ffffff;
+  border-right: 1px solid #e0e0e0;
+  padding-top: 2rem;
+}
+.content {
+  padding: 2rem;
+}
+.logo {
+  color: #7e22ce;
+  font-weight: 600;
+  font-size: 24px;
+  margin-bottom: 2rem;
+  padding-left: 1rem;
+}
+.nav-link {
+  color: #6b7280;
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 0;
+  transition: background-color 0.3s, color 0.3s;
+}
+.nav-link:hover,
+.nav-link.active {
+  background-color: #f3e8ff;
+  color: #7e22ce;
+}
+.search-container {
+  margin-bottom: 2rem;
+}
+.form-control {
+  border-radius: 0.375rem;
+}
+.btn-primary {
+  background-color: #7e22ce;
+  border-color: #7e22ce;
+}
+.btn-primary:hover {
+  background-color: #6b21a8;
+  border-color: #6b21a8;
+}
+.toggle-btn {
+  background-color: #f3e8ff;
+  color: #7e22ce;
+  border: none;
+  padding: 0.375rem 1rem;
+  border-radius: 0.375rem;
+}
+.toggle-btn.active {
+  background-color: #7e22ce;
+  color: #ffffff;
+}
+.consultant-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+.consultant-image {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+}
+.btn-chat {
+  background-color: #7e22ce;
+  color: #ffffff;
+  border: none;
+  padding: 0.25rem 1rem;
+  border-radius: 0.25rem;
+}
+.btn-chat:hover {
+  background-color: #6b21a8;
+}
+h5 {
+  color: #111827;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.section-title {
+  color: #7e22ce;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}

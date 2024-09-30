@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
+
+* {
+  font-family: "Poppins", system-ui;
+}
+
+.main-content {
+  margin-left: 340px;
+  padding-top: 95px;
+}
+
+.search-container {
+  margin-bottom: 2rem;
+}
+.form-control {
+  border-radius: 12px;
+  width: 1060px;
+  height: 70px;
+}
+.btn {
+  background-color: #ffffff;
+  border: 1px solid #daacfc;
+  color: black;
+  font-weight: 500;
+  width: 140px;
+  height: 70px;
+  border-radius: 12px;
+  transition: background-color 0.4s, color 0.4s, border 0.4s ease-in-out;
+}
+.btn:hover {
+  background-color: #7e30e1;
+  border: none;
+  color: white;
+}
+.topic-card {
+  border: 1px solid #7e30e1;
+  border-radius: 12px;
+  width: 655px;
+  height: 203px;
+  overflow: hidden;
+  display: flex;
+  box-shadow: 0px 4px 4px #8b8b8b;
+  align-items: center;
+}
+
+.topic-image {
+  width: 30%;
+  margin-left: 20px;
+  object-fit: cover;
+}
+.topic-content {
+  padding: 1rem;
+  flex-grow: 1;
+}
+
+.topic-title {
+  color: black;
+
+  font-size: 28px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.topic-para {
+  font-size: 20px;
+  width: 350px;
+  font-weight: 400;
+  color: #8b8b8b;
+}
+
+.section-title {
+  color: black;
+  font-weight: 600;
+  margin-bottom: 20px;
+  font-size: 36px;
+}
+
+.section-subtitle {
+  color: black;
+  font-size: 22px;
+  font-weight: 400;
+}
