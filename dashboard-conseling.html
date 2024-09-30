@@ -8,11 +8,8 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
-      rel="stylesheet"
-    />
     <link rel="stylesheet" href="src/css/dashboard-conseling.css" />
+    <link rel="stylesheet" href="src/css/sidebar.css" />
   </head>
   <body>
     <div class="container-fluid">
@@ -23,7 +20,8 @@
             <div class="logo">Alomani</div>
             <div class="mb-4">
               <h6
-                class="sidebar-heading px-3 mt-4 mb-1 text-muted text-uppercase"
+                class="sidebar-heading px-3 mt-4 mb-1 text-uppercase"
+                style="color: #8b8b8b; font-weight: 500"
               >
                 Features
               </h6>
@@ -89,7 +87,9 @@
             </div>
             <div>
               <h6
-                class="sidebar-heading px-3 mt-4 mb-1 text-muted text-uppercase"
+                class="sidebar-heading px-3 mt-4 mb-1 text-uppercase"
+                class="sidebar-heading px-3 mt-4 mb-1 text-uppercase"
+                style="color: #8b8b8b; font-weight: 500"
               >
                 Menu
               </h6>
@@ -122,137 +122,143 @@
         </div>
 
         <!-- Main content -->
-        <div class="col-md-9 ms-sm-auto col-lg-10 px-md-4 content">
-          <div class="search-container">
-            <div class="row g-2">
-              <div class="col">
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="Search Journals"
-                />
+        <div class="main-content">
+          <div class="container">
+            <div class="search-container">
+              <div class="row">
+                <div class="col">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Search Consultant"
+                  />
+                </div>
+                <div class="col">
+                  <button class="btn btn-search">Search</button>
+                </div>
               </div>
-              <div class="col-auto">
-                <button class="btn btn-primary">Search</button>
+              <div class="mt-4">
+                <button class="toggle-btn active me-2">Online</button>
+                <button class="toggle-btn">Offline</button>
               </div>
             </div>
-            <div class="mt-2">
-              <button class="toggle-btn active me-2">Online</button>
-              <button class="toggle-btn">Offline</button>
-            </div>
-          </div>
 
-          <h5 class="section-title">Our Recommendation</h5>
-          <div class="row">
-            <div class="col-md-6">
-              <div class="consultant-card">
-                <div class="d-flex align-items-center">
-                  <img
-                    src="assets/image/a-woman-smiles-with-arms-crossed-PhotoRoom (42).png"
-                    alt="Rei Ayanami"
-                    class="consultant-image me-3"
-                  />
-                  <div>
-                    <h6 class="mb-0">Rei Ayanami</h6>
-                    <small class="text-muted"
-                      >Expertise: Lorem ipsum, lorem ipsum, lorem ipsum</small
-                    >
+            <h5 class="section-title">
+              Our <span style="color: #7e30e1">Recommendation</span>
+            </h5>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="consultant-card">
+                  <div class="d-flex align-items-center">
+                    <img
+                      src="assets/image/a-woman-smiles-with-arms-crossed-PhotoRoom (42).png"
+                      alt="Rei Ayanami"
+                      class="consultant-image"
+                    />
+                    <div class="consultant-text">
+                      <h6 class="mb-0 consultant-name">Rei Ayanami</h6>
+                      <small class="text-muted" width="300px"
+                        >Expertise: Lorem ipsum, lorem ipsum, lorem ipsum</small
+                      >
+                    </div>
+                    <button class="btn btn-chat ms-auto">Chat</button>
                   </div>
-                  <button class="btn btn-chat ms-auto">Chat</button>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="consultant-card">
+                  <div class="d-flex align-items-center">
+                    <img
+                      src="assets/image/a-woman-smiles-with-arms-crossed-PhotoRoom (42).png"
+                      alt="Rei Ayanami"
+                      class="consultant-image"
+                    />
+                    <div class="consultant-text">
+                      <h6 class="mb-0 consultant-name">Rei Ayanami</h6>
+                      <small class="text-muted" width="300px"
+                        >Expertise: Lorem ipsum, lorem ipsum, lorem ipsum</small
+                      >
+                    </div>
+                    <button class="btn btn-chat ms-auto">Chat</button>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="col-md-6">
-              <div class="consultant-card">
-                <div class="d-flex align-items-center">
-                  <img
-                    src="assets/image/a-woman-smiles-with-arms-crossed-PhotoRoom (42).png"
-                    alt="Rei Ayanami"
-                    class="consultant-image me-3"
-                  />
-                  <div>
-                    <h6 class="mb-0">Rei Ayanami</h6>
-                    <small class="text-muted"
-                      >Expertise: Lorem ipsum, lorem ipsum, lorem ipsum</small
-                    >
-                  </div>
-                  <button class="btn btn-chat ms-auto">Chat</button>
-                </div>
-              </div>
-            </div>
-          </div>
 
-          <h5 class="section-title mt-4">Other Consultant</h5>
-          <div class="row">
-            <div class="col-md-6">
-              <div class="consultant-card">
-                <div class="d-flex align-items-center">
-                  <img
-                    src="assets/image/a-woman-smiles-with-arms-crossed-PhotoRoom (42).png"
-                    alt="Rei Ayanami"
-                    class="consultant-image me-3"
-                  />
-                  <div>
-                    <h6 class="mb-0">Rei Ayanami</h6>
-                    <small class="text-muted"
-                      >Expertise: Lorem ipsum, lorem ipsum, lorem ipsum</small
-                    >
+            <h5 class="section-title mt-4">
+              Other <span style="color: #7e30e1">Consultant</span>
+            </h5>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="consultant-card">
+                  <div class="d-flex align-items-center">
+                    <img
+                      src="assets/image/a-woman-smiles-with-arms-crossed-PhotoRoom (42).png"
+                      alt="Rei Ayanami"
+                      class="consultant-image"
+                    />
+                    <div class="consultant-text">
+                      <h6 class="mb-0 consultant-name">Rei Ayanami</h6>
+                      <small class="text-muted" width="300px"
+                        >Expertise: Lorem ipsum, lorem ipsum, lorem ipsum</small
+                      >
+                    </div>
+                    <button class="btn btn-chat ms-auto">Chat</button>
                   </div>
-                  <button class="btn btn-chat ms-auto">Chat</button>
                 </div>
               </div>
-            </div>
-            <div class="col-md-6">
-              <div class="consultant-card">
-                <div class="d-flex align-items-center">
-                  <img
-                    src="assets/image/a-woman-smiles-with-arms-crossed-PhotoRoom (42).png"
-                    alt="Rei Ayanami"
-                    class="consultant-image me-3"
-                  />
-                  <div>
-                    <h6 class="mb-0">Rei Ayanami</h6>
-                    <small class="text-muted"
-                      >Expertise: Lorem ipsum, lorem ipsum, lorem ipsum</small
-                    >
+              <div class="col-md-6">
+                <div class="consultant-card">
+                  <div class="d-flex align-items-center">
+                    <img
+                      src="assets/image/a-woman-smiles-with-arms-crossed-PhotoRoom (42).png"
+                      alt="Rei Ayanami"
+                      class="consultant-image"
+                    />
+                    <div class="consultant-text">
+                      <h6 class="mb-0 consultant-name">Rei Ayanami</h6>
+                      <small class="text-muted" width="300px"
+                        >Expertise: Lorem ipsum, lorem ipsum, lorem ipsum</small
+                      >
+                    </div>
+                    <button class="btn btn-chat ms-auto">Chat</button>
                   </div>
-                  <button class="btn btn-chat ms-auto">Chat</button>
                 </div>
               </div>
-            </div>
-            <div class="col-md-6">
-              <div class="consultant-card">
-                <div class="d-flex align-items-center">
-                  <img
-                    src="assets/image/a-woman-smiles-with-arms-crossed-PhotoRoom (42).png"
-                    alt="Rei Ayanami"
-                    class="consultant-image me-3"
-                  />
-                  <div>
-                    <h6 class="mb-0">Rei Ayanami</h6>
-                    <small class="text-muted"
-                      >Expertise: Lorem ipsum, lorem ipsum, lorem ipsum</small
-                    >
+              <div class="col-md-6">
+                <div class="consultant-card">
+                  <div class="d-flex align-items-center">
+                    <img
+                      src="assets/image/a-woman-smiles-with-arms-crossed-PhotoRoom (42).png"
+                      alt="Rei Ayanami"
+                      class="consultant-image"
+                    />
+                    <div class="consultant-text">
+                      <h6 class="mb-0 consultant-name">Rei Ayanami</h6>
+                      <small class="text-muted" width="300px"
+                        >Expertise: Lorem ipsum, lorem ipsum, lorem ipsum</small
+                      >
+                    </div>
+                    <button class="btn btn-chat ms-auto">Chat</button>
                   </div>
-                  <button class="btn btn-chat ms-auto">Chat</button>
                 </div>
               </div>
-            </div>
-            <div class="col-md-6">
-              <div class="consultant-card">
-                <div class="d-flex align-items-center">
-                  <img
-                    src="assets/image/a-woman-smiles-with-arms-crossed-PhotoRoom (42).png"
-                    alt="Rei Ayanami"
-                    class="consultant-image me-3"
-                  />
-                  <div>
-                    <h6 class="mb-0">Rei Ayanami</h6>
-                    <small class="text-muted"
-                      >Expertise: Lorem ipsum, lorem ipsum, lorem ipsum</small
-                    >
+              <div class="col-md-6">
+                <div class="consultant-card">
+                  <div class="d-flex align-items-center">
+                    <img
+                      src="assets/image/a-woman-smiles-with-arms-crossed-PhotoRoom (42).png"
+                      alt="Rei Ayanami"
+                      class="consultant-image"
+                    />
+                    <div class="consultant-text">
+                      <h6 class="mb-0 consultant-name">Rei Ayanami</h6>
+                      <small class="text-muted" width="300px"
+                        >Expertise: Lorem ipsum, lorem ipsum, lorem ipsum</small
+                      >
+                    </div>
+                    <button class="btn btn-chat ms-auto">Chat</button>
                   </div>
-                  <button class="btn btn-chat ms-auto">Chat</button>
                 </div>
               </div>
             </div>
