@@ -1,181 +1,263 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Alomani Login</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <style>
-        body, html {
-            height: 100%;
-            font-family: 'Poppins', sans-serif;
-        }
-        .full-height {
-            height: 100vh;
-        }
-        .form-section {
-            background-color: white;
-            padding: 2rem;
-        }
-        .illustration-section {
-            background-color: #f3e8ff;
-        }
-        .btn-primary {
-            background-color: #7e22ce;
-            border-color: #7e22ce;
-        }
-        .btn-primary:hover {
-            background-color: #6b21a8;
-            border-color: #6b21a8;
-        }
-        .form-control {
-            border: 1px solid #e5e7eb;
-            padding: 0.75rem 1rem;
-        }
-        .form-control:focus {
-            border-color: #7e22ce;
-            box-shadow: 0 0 0 0.2rem rgba(126, 34, 206, 0.25);
-        }
-        .btn-google {
-            background-color: #fff;
-            color: #374151;
-            border: 1px solid #e5e7eb;
-            padding: 0.75rem 1rem;
-        }
-        .btn-google:hover {
-            background-color: #f9fafb;
-        }
-        .login-link {
-            color: #7e22ce;
-            text-decoration: none;
-        }
-        .login-link:hover {
-            text-decoration: underline;
-        }
-        .form-label {
-            font-size: 0.875rem;
-            font-weight: 500;
-            color: #374151;
-        }
-        .modal-content {
-            border-radius: 0.5rem;
-        }
-        .modal-header {
-            border-bottom: none;
-            padding-bottom: 0;
-        }
-        .modal-body {
-            padding-top: 0;
-        }
-        .modal-footer {
-            border-top: none;
-            justify-content: flex-end;
-        }
+      body,
+      html {
+        height: 100%;
+        font-family: "Poppins", sans-serif;
+      }
+      .full-height {
+        height: 100vh;
+      }
+      .form-section {
+        background-color: white;
+        padding: 2rem;
+      }
+      .illustration-section {
+        background-color: #f3e8ff;
+      }
+      .btn-primary {
+        background-color: #7e22ce;
+        border-color: #7e22ce;
+      }
+      .btn-primary:hover {
+        background-color: #6b21a8;
+        border-color: #6b21a8;
+      }
+      .form-control {
+        border: 1px solid #e5e7eb;
+        padding: 0.75rem 1rem;
+      }
+      .form-control:focus {
+        border-color: #7e22ce;
+        box-shadow: 0 0 0 0.2rem rgba(126, 34, 206, 0.25);
+      }
+      .btn-google {
+        background-color: #fff;
+        color: #374151;
+        border: 1px solid #e5e7eb;
+        padding: 0.75rem 1rem;
+      }
+      .btn-google:hover {
+        background-color: #f9fafb;
+      }
+      .login-link {
+        color: #7e22ce;
+        text-decoration: none;
+      }
+      .login-link:hover {
+        text-decoration: underline;
+      }
+      .form-label {
+        font-size: 0.875rem;
+        font-weight: 500;
+        color: #374151;
+      }
+      .modal-content {
+        border-radius: 0.5rem;
+      }
+      .modal-header {
+        border-bottom: none;
+        padding-bottom: 0;
+      }
+      .modal-body {
+        padding-top: 0;
+      }
+      .modal-footer {
+        border-top: none;
+        justify-content: flex-end;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container-fluid">
-        <div class="row full-height">
-            <div class="col-md-6 form-section d-flex align-items-center justify-content-center">
-                <div class="w-100" style="max-width: 400px;">
-                    <h1 class="mb-2" style="color: #7e22ce; font-weight: 600;">Alomani</h1>
-                    <p class="mb-4" style="font-size: 0.875rem; color: #6b7280;">Understand your feeling with AI Assistant</p>
-                    <form id="loginForm">
-                        <div class="mb-3">
-                            <label for="email" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="password" class="form-label">Password</label>
-                            <input type="password" class="form-control" id="password" placeholder="••••••••" required>
-                        </div>
-                        <div class="d-flex justify-content-between align-items-center mb-4">
-                            <div class="form-check">
-                                <input type="checkbox" class="form-check-input" id="remember">
-                                <label class="form-check-label" for="remember" style="font-size: 0.875rem;">Remember Me</label>
-                            </div>
-                            <a href="#" class="login-link" style="font-size: 0.875rem;">Forget My Password</a>
-                        </div>
-                        <div class="d-grid mb-4">
-                            <button type="submit" class="btn btn-primary py-2">Login</button>
-                        </div>
-                        <div class="d-grid">
-                            <button type="button" class="btn btn-google">
-                                <img src="https://img.icons8.com/color/16/000000/google-logo.png" alt="Google logo" class="me-2">
-                                Login with Google
-                            </button>
-                        </div>
-                        <div class="mt-4 text-center">
-                            <span style="font-size: 0.875rem; color: #6b7280;">Doesn't Have Account? </span>
-                            <a href="#" class="login-link" style="font-size: 0.875rem;">Register Now</a>
-                        </div>
-                    </form>
+      <div class="row full-height">
+        <div
+          class="col-md-6 form-section d-flex align-items-center justify-content-center"
+        >
+          <div class="w-100" style="max-width: 400px">
+            <img src="assets/image/SoulCare.png" alt="" />
+            <p class="mb-4" style="font-size: 0.875rem; color: #6b7280">
+              Understand your feeling with AI Assistant
+            </p>
+            <form id="loginForm">
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="Enter your email"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="password"
+                  placeholder="••••••••"
+                  required
+                />
+              </div>
+              <div
+                class="d-flex justify-content-between align-items-center mb-4"
+              >
+                <div class="form-check">
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id="remember"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="remember"
+                    style="font-size: 0.875rem"
+                    >Remember Me</label
+                  >
                 </div>
-            </div>
-            <div class="col-md-6 illustration-section d-flex align-items-center justify-content-center">
-                <img src="assets/image/Woman seeking psycholigist’s help.svg" alt="Illustration of two people sitting and talking" class="img-fluid">
-            </div>
+                <a href="#" class="login-link" style="font-size: 0.875rem"
+                  >Forget My Password</a
+                >
+              </div>
+              <div class="d-grid mb-4">
+                <button type="submit" class="btn btn-primary py-2">
+                  Login
+                </button>
+              </div>
+              <div class="d-grid">
+                <button type="button" class="btn btn-google">
+                  <img
+                    src="https://img.icons8.com/color/16/000000/google-logo.png"
+                    alt="Google logo"
+                    class="me-2"
+                  />
+                  Login with Google
+                </button>
+              </div>
+              <div class="mt-4 text-center">
+                <span style="font-size: 0.875rem; color: #6b7280"
+                  >Doesn't Have Account?
+                </span>
+                <a href="#" class="login-link" style="font-size: 0.875rem"
+                  >Register Now</a
+                >
+              </div>
+            </form>
+          </div>
         </div>
+        <div
+          class="col-md-6 illustration-section d-flex align-items-center justify-content-center"
+        >
+          <img
+            src="assets/image/Woman seeking psycholigist’s help.svg"
+            alt="Illustration of two people sitting and talking"
+            class="img-fluid"
+          />
+        </div>
+      </div>
     </div>
 
     <!-- Modal -->
-    <div class="modal fade" id="problemModal" tabindex="-1" aria-labelledby="problemModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="problemModalLabel">What's your problem?</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <textarea class="form-control" id="problemDescription" rows="5" placeholder="Share your problem here"></textarea>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" onclick="sendProblem()">Send</button>
-                </div>
-            </div>
+    <div
+      class="modal fade"
+      id="problemModal"
+      tabindex="-1"
+      aria-labelledby="problemModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="problemModalLabel">
+              What's your problem?
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <textarea
+              class="form-control"
+              id="problemDescription"
+              rows="5"
+              placeholder="Share your problem here"
+            ></textarea>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-primary"
+              onclick="sendProblem()"
+            >
+              Send
+            </button>
+          </div>
         </div>
+      </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-          document.getElementById('loginForm').addEventListener('submit', function(e) {
-        e.preventDefault();
-        var modal = new bootstrap.Modal(document.getElementById('problemModal'));
-        modal.show();
-    });
+      document
+        .getElementById("loginForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          var modal = new bootstrap.Modal(
+            document.getElementById("problemModal")
+          );
+          modal.show();
+        });
 
-    function sendProblem() {
-        var problem = document.getElementById('problemDescription').value;
-        console.log('Problem submitted:', problem);
+      function sendProblem() {
+        var problem = document.getElementById("problemDescription").value;
+        console.log("Problem submitted:", problem);
 
-        var modal = bootstrap.Modal.getInstance(document.getElementById('problemModal'));
+        var modal = bootstrap.Modal.getInstance(
+          document.getElementById("problemModal")
+        );
         modal.hide();
 
         // SweetAlert loading and success
         Swal.fire({
-            title: 'Analyzing by AI...',
-            html: 'Please wait while we process your request.',
-            allowOutsideClick: false,
-            didOpen: () => {
-                Swal.showLoading(); // Loading animation
-            }
+          title: "Analyzing by AI...",
+          html: "Please wait while we process your request.",
+          allowOutsideClick: false,
+          didOpen: () => {
+            Swal.showLoading(); // Loading animation
+          },
         });
 
         // Simulating process delay (2 seconds in this case)
         setTimeout(() => {
-            Swal.fire({
-                icon: 'success',
-                title: 'Your problem has been submitted!',
-                showConfirmButton: false,
-                timer: 1500
-            }).then(() => {
-                // After SweetAlert closes, redirect to profile.html
-                window.location.href = "profile.html";
-            });
+          Swal.fire({
+            icon: "success",
+            title: "Your problem has been submitted!",
+            showConfirmButton: false,
+            timer: 1500,
+          }).then(() => {
+            // After SweetAlert closes, redirect to profile.html
+            window.location.href = "profile.html";
+          });
         }, 2000); // Simulating 2 seconds delay for processing
-    }
+      }
     </script>
-</body>
+  </body>
 </html>

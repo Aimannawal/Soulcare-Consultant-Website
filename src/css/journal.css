@@ -5,7 +5,7 @@
 }
 
 .main-content {
-  margin-left: 340px;
+  margin-left: 100px;
   padding-top: 95px;
 }
 
@@ -35,7 +35,7 @@
 .topic-card {
   border: 1px solid #7e30e1;
   border-radius: 12px;
-  width: 655px;
+  width: 580px;
   height: 203px;
   overflow: hidden;
   display: flex;
