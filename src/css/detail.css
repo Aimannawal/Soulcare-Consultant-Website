@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
+
+* {
+  font-family: "Poppins", system-ui;
+}
+
+.main-content {
+  margin-left: 100px;
+  padding-top: 95px;
+}
+
+.activities-place {
+  background-color: #bf81f6;
+  width: 400px;
+  height: 350px;
+  padding-left: 32px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+}
+
+.activities-img {
+  width: 337px;
+  object-fit: cover;
+  height: 210px;
+  border-radius: 12px;
+  margin-top: 22px;
+  margin-bottom: 20px;
+}
+
+.activities-title {
+  color: white;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.activities-para {
+  font-size: 18px;
+  font-weight: 400;
+  color: white;
+}
+
+.recommendation-card {
+  background-color: #a561ec;
+  border-radius: 15px;
+  color: white;
+  display: flex;
+  padding: 15px;
+  margin: 10px 0;
+  height: 120px;
+  padding-top: 10px;
+  margin-bottom: 20px;
+}
+.recommendation-card img {
+  width: 128px;
+  height: 85px;
+  object-fit: cover;
+  margin-left: 10px;
+  margin-right: 20px;
+  border-radius: 12px;
+}
+.recommendation-card h5 {
+  margin-bottom: 5px;
+}
+
+.recommend-head {
+  margin-bottom: 20px;
+  font-size: 36px;
+  font-weight: 500;
+}
+
+.option-head {
+  font-size: 36px;
+  font-weight: 500;
+}
